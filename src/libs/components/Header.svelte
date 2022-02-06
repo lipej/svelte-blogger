@@ -3,7 +3,6 @@
 	import Nav from './Nav.svelte';
 
 	export let title: string;
-
 	export const social = {
 		github: 'lipejose',
 		linkedin: 'felipejosedasilva',
@@ -14,6 +13,5 @@
 <title>{title}</title>
 <Nav name="Lipe" {social}>
 	<Links title="Home" to="/" />
-	<Links title="Sobre" to="/about" />
 	<Links title="Contato" to="contact" />
 </Nav>

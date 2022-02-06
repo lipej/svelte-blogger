@@ -32,6 +32,7 @@
   },
   "type": "module",
   "dependencies": {
-    "daisyui": "^1.25.4"
+    "daisyui": "^1.25.4",
+    "theme-change": "^2.0.2"
   }
 }

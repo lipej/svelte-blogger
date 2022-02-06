@@ -2,6 +2,8 @@
 	import Github from '../icons/social/Github.svelte';
 	import Linkedin from '../icons/social/Linkedin.svelte';
 	import Instagram from '../icons/social/Instagram.svelte';
+	import { browser } from '$app/env';
+	import { onMount } from 'svelte';
 
 	type Social = {
 		github?: string;
@@ -10,8 +12,21 @@
 	};
 
 	export let social: Social;
-
 	export let name: string;
+
+	$: theme = '';
+
+	function handleTheme() {
+		if (browser) {
+			theme = localStorage.getItem('theme') === 'dracula' ? '☀️' : '🌙';
+		}
+	}
+
+	onMount(() => {
+		if (browser) {
+			theme = localStorage.getItem('theme') === 'fantasy' ? '☀️' : '🌙';
+		}
+	});
 </script>
 
 <div class="navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-box mx-8 mt-4">
@@ -56,4 +71,11 @@
 			</button>
 		</div>
 	{/if}
+
+	<button
+		class="px-8"
+		data-toggle-theme="dracula,fantasy"
+		data-act-class="ACTIVECLASS"
+		on:click={handleTheme}>{theme}</button
+	>
 </div>
