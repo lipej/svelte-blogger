@@ -11,7 +11,7 @@
 				<a href={'/posts/' + post.slug} class="font-bold text-2xl">{post.title}</a>
 				<p class="italic text-gray-400 text-sm">{dateFormatter(post.createdAt)}</p>
 			</div>
-			<p class="pt-2 text-justify text-base">{post.description ?? ''}</p>
+			<p class="pt-1 text-justify text-base">{post.description ?? ''}</p>
 		</div>
 	{/each}
 </div>

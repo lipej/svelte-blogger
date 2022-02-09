@@ -14,7 +14,7 @@
 
 <Header title="Lipe José | Dev" />
 
-<div class="grid grid-cols-3">
+<div class="grid grid-cols-3 ">
 	<div class="flex justify-center m-8">
 		<AboutCard {about} />
 	</div>

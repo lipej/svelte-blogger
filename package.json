@@ -16,6 +16,7 @@
 		"@rollup/plugin-json": "^4.1.0",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/kit": "next",
+		"@types/markdown-it": "^12.2.3",
 		"@typescript-eslint/eslint-plugin": "^5.10.1",
 		"@typescript-eslint/parser": "^5.10.1",
 		"autoprefixer": "^10.4.2",
@@ -44,10 +45,12 @@
 		"graphql": "^15.8.0",
 		"graphql-request": "^4.0.0",
 		"highlight.js": "^11.4.0",
+		"jetbrains-mono": "^1.0.6",
 		"markdown-it": "^12.3.2",
 		"punycode": "^2.1.1",
 		"svelte-apollo": "^0.4.0",
 		"svelte-apollo-client": "^0.1.4",
-		"theme-change": "^2.0.2"
+		"theme-change": "^2.0.2",
+		"uuid": "^8.3.2"
 	}
 }

@@ -6,32 +6,23 @@
 </script>
 
 <script lang="ts">
-	import MarkdownIt from 'markdown-it';
-	import hljs from 'highlight.js';
 	import 'highlight.js/styles/a11y-light.css';
+	import '../../css/markdown.css';
+	import 'jetbrains-mono';
 
 	import type { Post } from 'src/graphql';
 	import { GET_POST, client } from 'src/graphql';
+	import { markdown } from '../../config';
 
 	import Loading from 'src/libs/components/Loading.svelte';
 	import ErrorAlert from 'src/libs/components/ErrorAlert.svelte';
 	import { dateFormatter } from 'src/utils/dateFormatter';
+	import Tags from 'src/libs/components/Tags.svelte';
+
 	export let slug: string;
-	const md = new MarkdownIt({
-		highlight: function (str, lang) {
-			if (lang && hljs.getLanguage(lang)) {
-				try {
-					return hljs.highlight(lang, str).value;
-				} catch (e) {
-					// eslint-disable-next-line no-console
-					console.error('Failed to highlight string');
-				}
-			}
-			return ''; // use external default escaping
-		}
-	});
 
 	const data = client.query<{ post: Post }>(GET_POST, { variables: { slug } });
+	const md = markdown(slug);
 </script>
 
 <div class="pt-8">
@@ -40,11 +31,16 @@
 	{:else if $data.error}
 		<ErrorAlert message="Ops, something went wrong" />
 	{:else}
-		<h2 class="text-2xl font-bold">{$data.data.post.title}</h2>
-		<p class="italic text-gray-400 text-sm">{dateFormatter($data.data.post.createdAt)}</p>
-
-		<div class="text-base pt-4 max-w-3xl text-justify">
-			{@html md.render($data.data.post.teste)}
+		<span class="text-2xl font-bold">{$data.data.post.title}</span>
+		<br />
+		<span class="italic text-gray-400 text-sm pb-0">{dateFormatter($data.data.post.createdAt)}</span
+		>
+		<br />
+		<Tags tags={$data.data.post.tags} />
+		<div
+			class="text-base pt-4 max-w-4xl text-justify markdown-body divide-y border-t-[1px] border-y-zinc-800 mt-2 "
+		>
+			{@html md.render($data.data.post.content)}
 		</div>
 	{/if}
 </div>

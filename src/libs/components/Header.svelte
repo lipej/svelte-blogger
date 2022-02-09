@@ -13,5 +13,5 @@
 <title>{title}</title>
 <Nav name="Lipe" {social}>
 	<Links title="Home" to="/" />
-	<Links title="Contato" to="contact" />
+	<!-- <Links title="Contato" to="/contact" /> -->
 </Nav>

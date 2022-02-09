@@ -10,7 +10,7 @@
 </script>
 
 <h2 class="text-2xl font-bold">Latest posts</h2>
-<div class="pt-8">
+<div class="pt-3">
 	{#if $posts.loading}
 		<Loading />
 	{:else if $posts.error}

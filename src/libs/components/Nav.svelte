@@ -4,6 +4,7 @@
 	import Instagram from '../icons/social/Instagram.svelte';
 	import { browser } from '$app/env';
 	import { onMount } from 'svelte';
+	import { DARK_THEME, LIGHT_THEME } from '../../config';
 
 	type Social = {
 		github?: string;
@@ -18,13 +19,13 @@
 
 	function handleTheme() {
 		if (browser) {
-			theme = localStorage.getItem('theme') === 'dracula' ? '☀️' : '🌙';
+			theme = localStorage.getItem('theme') === DARK_THEME ? '☀️' : '🌙';
 		}
 	}
 
 	onMount(() => {
 		if (browser) {
-			theme = localStorage.getItem('theme') === 'fantasy' ? '☀️' : '🌙';
+			theme = localStorage.getItem('theme') === LIGHT_THEME ? '☀️' : '🌙';
 		}
 	});
 </script>
@@ -74,7 +75,7 @@
 
 	<button
 		class="px-8"
-		data-toggle-theme="dracula,fantasy"
+		data-toggle-theme={`${DARK_THEME},${LIGHT_THEME}`}
 		data-act-class="ACTIVECLASS"
 		on:click={handleTheme}>{theme}</button
 	>

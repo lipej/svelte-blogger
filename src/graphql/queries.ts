@@ -6,10 +6,7 @@ export const GET_POSTS = gql`
 			id
 			slug
 			title
-			content {
-				html
-				text
-			}
+			description
 			createdAt
 		}
 	}
@@ -19,11 +16,8 @@ export const GET_POST = gql`
 	query getPost($slug: String!) {
 		post(where: { slug: $slug }) {
 			title
-			content {
-				html
-				text
-			}
-			teste
+			content 
+			tags
 			createdAt
 		}
 	}

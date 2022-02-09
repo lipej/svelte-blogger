@@ -3,5 +3,5 @@
 </script>
 
 {#each tags as tag}
-	<div class="badge badge-ghost m-1">{tag}</div>
+	<div class="badge badge-ghost m-2 ml-0">{tag}</div>
 {/each}
