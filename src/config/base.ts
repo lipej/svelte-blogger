@@ -1,5 +1,6 @@
 export const about = {
 	name: 'Felipe José',
+	siteTitle: 'Lipe',
 	img: 'https://www.linkpicture.com/q/LPic620050670fb95945239599.jpg',
 	description: 'Desenvolvedor de Software',
 	skills: [
@@ -13,3 +14,13 @@ export const about = {
 	],
 	tags: ['Software', 'Developer', 'Tech']
 };
+
+export const social = {
+	github: 'lipejose',
+	linkedin: 'felipejosedasilva',
+	instagram: 'fej0se'
+};
+
+export const LANG = 'pt-BR';
+
+export const dev = '@lipejose';

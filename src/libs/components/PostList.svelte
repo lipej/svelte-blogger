@@ -9,9 +9,10 @@
 		<div class="mx-4 mt-4">
 			<div>
 				<a href={'/posts/' + post.slug} class="font-bold text-2xl">{post.title}</a>
-				<p class="italic text-gray-400 text-sm">{dateFormatter(post.createdAt)}</p>
+				<br />
+				<span class="italic text-gray-400 text-sm ">{dateFormatter(post.createdAt)}</span>
 			</div>
-			<p class="pt-1 text-justify text-base">{post.description ?? ''}</p>
+			<span class="pt-1 text-justify text-base">{post.description ?? ''}</span>
 		</div>
 	{/each}
 </div>

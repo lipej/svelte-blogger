@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Post } from 'src/graphql';
 	import { GET_POSTS, client } from 'src/graphql';
+	import { translate, LANG } from '../config';
 
 	import PostList from 'src/libs/components/PostList.svelte';
 	import Loading from 'src/libs/components/Loading.svelte';
@@ -9,12 +10,12 @@
 	const posts = client.query<{ posts: Post[] }>(GET_POSTS);
 </script>
 
-<h2 class="text-2xl font-bold">Latest posts</h2>
-<div class="pt-3">
+<span class="text-2xl font-bold">{translate[LANG].list}</span>
+<div class="pt-2">
 	{#if $posts.loading}
 		<Loading />
 	{:else if $posts.error}
-		<ErrorAlert message="Ops, something went wrong" />
+		<ErrorAlert message={translate[LANG].error} />
 	{:else}
 		<PostList data={$posts.data.posts} />
 	{/if}

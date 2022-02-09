@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { themeChange } from 'theme-change';
-	import { about } from 'src/config';
+	import { about, dev } from 'src/config';
 	import '../app.css';
 	import Header from 'src/libs/components/Header.svelte';
 	import Footer from 'src/libs/components/Footer.svelte';
@@ -23,4 +23,4 @@
 	</div>
 </div>
 
-<Footer copyrigth="Lipe" />
+<Footer copyrigth={dev} />

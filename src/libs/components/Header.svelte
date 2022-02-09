@@ -1,17 +1,12 @@
 <script lang="ts">
 	import Links from './Links.svelte';
 	import Nav from './Nav.svelte';
-
+	import { social, about } from '../../config';
 	export let title: string;
-	export const social = {
-		github: 'lipejose',
-		linkedin: 'felipejosedasilva',
-		instagram: 'fej0se'
-	};
 </script>
 
 <title>{title}</title>
-<Nav name="Lipe" {social}>
+<Nav name={about.siteTitle} {social}>
 	<Links title="Home" to="/" />
-	<!-- <Links title="Contato" to="/contact" /> -->
+	<!-- <Links title={translate[LANG].contact} to="/contact" /> -->
 </Nav>
