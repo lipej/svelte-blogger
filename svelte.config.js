@@ -15,6 +15,12 @@ const config = {
 				alias: {
 					src: path.resolve('./src')
 				}
+			},
+			optimizeDeps: {
+				exclude: ['@apollo/client']
+			},
+			ssr: {
+				noExternal: ['@apollo/client']
 			}
 		}
 	}
