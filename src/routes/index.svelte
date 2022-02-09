@@ -1,95 +1,21 @@
-<script>
-	import Header from 'src/libs/components/Header.svelte';
-	import Footer from 'src/libs/components/Footer.svelte';
+<script lang="ts">
+	import type { Post } from 'src/graphql';
+	import { GET_POSTS, client } from 'src/graphql';
 
-	import { onMount } from 'svelte';
-	import { each } from 'svelte/internal';
-	import { themeChange } from 'theme-change';
 	import PostList from 'src/libs/components/PostList.svelte';
-	import Tags from 'src/libs/components/Tags.svelte';
-	import Skills from 'src/libs/components/Skills.svelte';
-	import AboutCard from 'src/libs/components/AboutCard.svelte';
+	import Loading from 'src/libs/components/Loading.svelte';
+	import ErrorAlert from 'src/libs/components/ErrorAlert.svelte';
 
-	onMount(() => {
-		themeChange(false);
-	});
-
-	let posts = [
-		{
-			title: 'Test post',
-			description:
-				'But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-			createdAt: new Date()
-		},
-		{
-			title: 'Test post',
-			description:
-				'But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-
-			createdAt: new Date()
-		},
-		{
-			title: 'Test post',
-			description:
-				'But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-			createdAt: new Date()
-		},
-		{
-			title: 'Test post',
-			description:
-				'But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-
-			createdAt: new Date()
-		},
-		{
-			title: 'Test post',
-			description:
-				'But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-
-			createdAt: new Date()
-		},
-		{
-			title: 'Test post',
-			description:
-				'But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-
-			createdAt: new Date()
-		},
-		{
-			title: 'Test post',
-			description:
-				'But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-
-			createdAt: new Date()
-		}
-	];
-
-	let about = {
-		name: 'Felipe José',
-		img: 'https://www.linkpicture.com/q/LPic620050670fb95945239599.jpg',
-		description:
-			'But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-		skills: [
-			{ name: 'Svelte', percent: '20' },
-			{ name: 'Svelte', percent: '100' },
-			{ name: 'Svelte', percent: '40' },
-			{ name: 'Svelte', percent: '50' },
-			{ name: 'Svelte', percent: '20' }
-		],
-		tags: ['tetse']
-	};
+	const posts = client.query<{ posts: Post[] }>(GET_POSTS);
 </script>
 
-<Header title="Lipe José | Dev" />
-
-<div class="grid grid-cols-3">
-	<div class="flex justify-center m-8">
-		<AboutCard {about} />
-	</div>
-	<div class="col-span-2 m-10">
-		<h2 class="text-2xl font-bold">Latest posts</h2>
-		<PostList data={posts} />
-	</div>
+<h2 class="text-2xl font-bold">Latest posts</h2>
+<div class="pt-8">
+	{#if $posts.loading}
+		<Loading />
+	{:else if $posts.error}
+		<ErrorAlert message="Ops, something went wrong" />
+	{:else}
+		<PostList data={$posts.data.posts} />
+	{/if}
 </div>
-
-<Footer copyrigth="Lipe" />
