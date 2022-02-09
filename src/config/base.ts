@@ -21,6 +21,12 @@ export const social = {
 	instagram: 'fej0se'
 };
 
-export const LANG = 'pt-BR';
+export const site = {
+	title: 'Lipe José | Dev',
+	navTitle: 'Lipe',
+	lang: 'pt-BR'
+};
+
+export const LANG = site.lang;
 
 export const dev = '@lipejose';

@@ -12,7 +12,7 @@
 	});
 </script>
 
-<Header title="Lipe José | Dev" />
+<Header />
 
 <div class="grid grid-cols-3 ">
 	<div class="flex justify-center m-8">

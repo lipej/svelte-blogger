@@ -1,12 +1,11 @@
 <script lang="ts">
 	import Links from './Links.svelte';
 	import Nav from './Nav.svelte';
-	import { social, about } from '../../config';
-	export let title: string;
+	import { social, site } from '../../config';
 </script>
 
-<title>{title}</title>
-<Nav name={about.siteTitle} {social}>
+<title>{site.title}</title>
+<Nav name={site.navTitle} {social}>
 	<Links title="Home" to="/" />
 	<!-- <Links title={translate[LANG].contact} to="/contact" /> -->
 </Nav>
