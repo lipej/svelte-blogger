@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`counter component should confirm there are no images in the counter  1`] = `
+HTMLCollection [
+  <div
+    class="navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-box mx-8 mt-4"
+  >
+    <div
+      class="flex-none px-2 mx-2"
+    >
+      <span
+        class="text-lg font-bold"
+      >
+        Lipe
+      </span>
+    </div>
+     
+    <div
+      class="flex-1 px-2 mx-2"
+    >
+      <div
+        class="items-stretch hidden lg:flex"
+      >
+        <a
+          class="btn btn-ghost btn-sm rounded-btn"
+          href="/"
+        >
+          Home
+        </a>
+      </div>
+    </div>
+     
+    <div
+      class="flex-none"
+    >
+      <button
+        class="btn btn-square btn-ghost"
+      >
+        <img
+          alt="github logo"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAFEElEQVRIieWWa2xURRTHf3PvdvuwLbT0RRuwLH1Q+sJADQ9JiKGhJG4VCa8EBUlIjBgjBRXLB4NRUEnxgyYmSMRofDViBIrUlAgatTFgBNpScNvSllJa3FLo9t2dO37Y3t1tt8A2+o3zae7Muec3/zPnzrnwoJmYlHd5uU5MTgEoG6jE0RCdIJrorj3L2rXy/wVXXcxFaCWAHZh2F68u4DhSK2PF3Nr/Bq6si8WiyoBnAS2oTSIkyvgMqe2kKPvW5MFVNVkgjiFIA9ARRnF8lLE6IdoyPyqMGWEhKKBtcIQ/XYMcudnjPvaPS5MozwYVDaCKKcytDx5cVZOFEL8BMQD2uChZlp6kp0dY76nV0T/MDkeHPO506aNT3Si1ZCJ4ILiyLhZd/YEgTQjUXlui2JUad0+gvyngnWan2t3UiVIIwIFbLByf9sBzs6gDZnr32hLZlRqHq7ePTmfXfaFut5vWtnZeT40Tb9sSzel0LOwf7ztWcdXFXIT+FyjdHhclj+bP1AVw6KsjlFdUkpVm44VNG2i93k5jSxuDQ0PETp1CdsZsurpvc/CLb+np7eXj9/YwMyWZ4vOtsqLLpYOQSDHPv9otY7ehlYDSdYRRlp6km7vq7esDwNHcwvY97+J2uwPUhoeFMTA4OOrfjwAOZCTpJ6t7DYnS0YwSYIvp70v16dMWPN8pxfFRhn8hzUieTkR4GG63nBAKjEIFVquVh1OSPTmOsFIcH2V4RAk75eVm0fmB5bQCRi+H1QnRYzJxx+Wif2BwQuBYUyhlcMfV6515OiHKjBXnufXGg5U+yxwWRIf7ppWi8syvQUA9NjLi5oeffvE++8dCGKmBYM1INofJoT7Bt3tc3O5xBQ0GaG677h2nhIb4rYiUQLDSlHfo5xoeFooQk+slEeE+lYYas+R98kkTqt2crm5sYUqfi7BQK0Jo5GSmUXPZETQ4w5bKhfor6JpGw5B/MRreVPgUG9pVc3hZajw6L5f8uXPIy8rgpS0biY6MDAq6IC+b1SuXk5+VSU5mOr0J032LmtYcCO6uPQs4Ac6MaG7/9D6cksyHb+1m2aICQkLGfvqmTYuZyuY1T7Gn5EU0zRf2u5suU7ITZ905c37s4Z2qPQxs1hFG/aI0rb+5iUuOJtYXr/Se8+DQEF9+f4KzF2qRhiQy4iHW21eyID97DBA8TSOrusGQKA2lDlOYO8EFAiC1MhBSorQdjg6ZN3cO/QMDfPT5NxiG5x44cvIUXx87SWPLNZqvtVN7xcH+g4cDKl8B2//ucHvapJDoWpn/emC5VtV8ghDPAeybnahenh4ltr72Bv0Dg2hC0Ns3gMWiMzQ8jL1wGRWnfsYaYmFVUSFb1q3yhtnX7FSljZ1m/EMsz9nqjwnsTlLbCTgASps6ef+GS33w5m6e37iO5UsXIw3Jtk0bAMi0zSI+NoY1TxThuNriVbpvtC2aGSfUeHU8JhBclH0LpZ4EupVClDZ2imeaumXq/Pksf2yh5yW/sxSaQOBpiY7+YeznW92ljZ1itBd3I41iluZ13x8MUJhbj1JLTOUVXS49q7rB2HajX96YPYdrSkOGhDCA4E7kFH63RnI04xGVVd1gnOhymWXvQBqLWZF3eSJEED977Ac2gdLv6esLKYFPCZWvTKQ0OLBpP17KQZMlCGEH7vYf5ESp4+haGY9n1913e0GBTSsv14nLXoBSNgySANDoQIgmnHXnJvND/+DZvwQq8+pJEwpvAAAAAElFTkSuQmCC"
+        />
+      </button>
+    </div>
+     
+    <div
+      class="flex-none"
+    >
+      <button
+        class="btn btn-square btn-ghost"
+      >
+        <img
+          alt="linkedin logo"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAADR0lEQVRIieWWTWhcVRTHf/e+Nx9p84EzgyRFpa+ttpJ+xNDOpm4Uumv92AxYEVG3opAqhLjJplaoCe7cqVVBKK6KhQhiLCgYDImpGUoFp1FsMzWZxJDYiTNz73GRTvJmJhPnJc1G/6t3D+e+37nvnHfugf+bVCDv/mGXaCLpKPHEcj+A0vxhDBkKuR/of6J0b8HvTB7RmB7gJBCr45UDLltHD/DmoatbA787mtDF0CCK5wHdUJBgET6xEj5D36O54OCzEwe1wyXAaxBYrYw1PM1bRyYbB5+dOKgd9R1I6yahZS1Y5Di9Xel/B799La51YQTYu0VoWVPWmiR93TN+Y03etC6+54fuDGmGUh5DKY8doUbTXKHdWjnnazgVq/M/HQY57TcdiEc44bVwwmvhQCyyGTAoXuDcj4/5TW5FFMaeqQ5mLJun70oWQRi/nd8cGLRWvGbhpbVYyuofdnU0lgXi/h1NrqajeSW+6aUS+ZLlodYQrlYsFiwzd0qEHUVbxGHmzob9I2eX59rLTWbtxNFEEmy82ju5awdfP7cHgCc/y3DltyWGT+9ld1uYjyfnyfxZoOdYgtaIw/RSkd5vsnyanl8PHKcpdhT4vgLsKPFENgq4Vs8+0kZLeC0zHc0hLpx8kNl8iaHMYo2/Y/HMXfDqLhHpCIaFlrBmKLPI61/d4ksf6NXuxLr+guwqP699ahFBBbszJmeWeerzKYwI74/lGH/5YToTUfbH61S/YvWbrp5YKT0diAqM385j7ubHiDCWXal6XSd+JdysARvUVFCwlY3X1TJa/VoDZs+1EWA2KDyAcuTnRmvBqZRBuLx9XLnkHxQqupRVagAw20A11qhBv6GmDPS5iY9QvFhe3xd16G5vAlba5/yy4fEHdhJxFdmlEunZ5dW9nYko7c0uf5eEb3//y4/5wPYefmVDMIPpmC4UR0Dt2+zxqnTDusUkbxytqJ/ae66nc87CM8DCPYAuWORUNXR9MEBvV9paSQLXtwD9pd70UR8M0Nf1s7Xh4wgXABsAaEA+tGE3WQ8KDY+3Vw9pbA+oU1Rdmz7NgnxhjRqoN+AFB5d18aLDjf3HHIsnqPaVF0jWCBn2XR8lldqOX/E/on8AGCYm6GqoM2cAAAAASUVORK5CYII="
+        />
+      </button>
+    </div>
+     
+    <div
+      class="flex-none"
+    >
+      <button
+        class="btn btn-square btn-ghost"
+      >
+        <img
+          alt="instagram logo"
+          src="data:image/png;base64,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"
+        />
+      </button>
+    </div>
+     
+    <button
+      class="px-8"
+      data-act-class="ACTIVECLASS"
+      data-toggle-theme="dracula,garden"
+    >
+      🌙
+    </button>
+  </div>,
+]
+`;

@@ -3,7 +3,7 @@
 	export let message: string;
 </script>
 
-<div class="flex justify-center items-center">
+<div data-testid="error" class="flex justify-center items-center">
 	<div class="alert alert-error w-fit">
 		<div class="flex-1">
 			<ErrorIcon />

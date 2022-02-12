@@ -2,7 +2,6 @@
 	import Github from '../icons/social/Github.svelte';
 	import Linkedin from '../icons/social/Linkedin.svelte';
 	import Instagram from '../icons/social/Instagram.svelte';
-	import { browser } from '$app/env';
 	import { onMount } from 'svelte';
 	import { DARK_THEME, LIGHT_THEME } from '../../config';
 
@@ -18,15 +17,11 @@
 	$: theme = '';
 
 	function handleTheme() {
-		if (browser) {
-			theme = localStorage.getItem('theme') === DARK_THEME ? '☀️' : '🌙';
-		}
+		theme = localStorage.getItem('theme') === DARK_THEME ? '☀️' : '🌙';
 	}
 
 	onMount(() => {
-		if (browser) {
-			theme = localStorage.getItem('theme') === LIGHT_THEME ? '☀️' : '🌙';
-		}
+		theme = localStorage.getItem('theme') === LIGHT_THEME ? '☀️' : '🌙';
 	});
 </script>
 

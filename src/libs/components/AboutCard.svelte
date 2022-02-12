@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Skills from './Skills.svelte';
 	import Tags from './Tags.svelte';
+
 	type About = {
 		name: string;
 		img: string;
@@ -12,6 +13,7 @@
 </script>
 
 <div
+	data-testid="aboutcard"
 	class="grid items-center gap-4 p-4 py-8 shadow-xl shadow-blue-500/10 bg-base-100 rounded-box place-items-center flex-shrink-0 col-span-3 row-span-3 mx-2 xl:mx-0 w-72 place-self-start"
 >
 	<div class="p-px mask mask-squircle bg-base-content bg-opacity-10">
