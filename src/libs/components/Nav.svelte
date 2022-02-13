@@ -4,6 +4,7 @@
 	import Instagram from '../icons/social/Instagram.svelte';
 	import { onMount } from 'svelte';
 	import { DARK_THEME, LIGHT_THEME } from '../../config';
+	import Links from './Links.svelte';
 
 	type Social = {
 		github?: string;
@@ -29,7 +30,8 @@
 	<div class="flex-none px-2 mx-2">
 		<span class="text-lg font-bold"> {name} </span>
 	</div>
-	<div class="flex-1 px-2 mx-2">
+	<div class="flex-1 md:px-2 md:mx-2">
+		<Links title="Home" to="/" />
 		<div class="items-stretch hidden lg:flex">
 			<slot />
 		</div>

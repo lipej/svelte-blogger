@@ -6,6 +6,5 @@
 
 <title>{site.title}</title>
 <Nav name={site.navTitle} {social}>
-	<Links title="Home" to="/" />
 	<!-- <Links title={translate[LANG].contact} to="/contact" /> -->
 </Nav>
