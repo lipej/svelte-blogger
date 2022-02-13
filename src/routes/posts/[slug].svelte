@@ -37,9 +37,8 @@
 		>
 		<br />
 		<Tags tags={$data.data.post.tags} />
-		<div
-			class="text-base pt-4 max-w-4xl text-justify markdown-body divide-y border-t-[1px] border-y-zinc-800 mt-2 "
-		>
+		<div class=" divide-y border-t-[1px] border-y-zinc-800 mt-2 " />
+		<div class="text-base pt-4 max-w-4xl text-justify markdown-body">
 			{@html md.render($data.data.post.content)}
 		</div>
 	{/if}
