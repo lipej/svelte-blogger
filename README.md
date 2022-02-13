@@ -1,20 +1,55 @@
-# create-svelte
+# svelte-blogger
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is a blog built with sveltekit, tailwind and daisyUI, made to be used as my personal blog.
 
-## Creating a project
+This app also use graphql and use markdown to write posts.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## How use it
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
+Just fork or clone the repository, you will need a graphql api, I decide to not implemeted my own so i personally use GraphCMS, and it is so easy!
 
-# create a new project in my-app
-npm init svelte@next my-app
+My GraphCMS schema looks like it:
+
+![GraphCMS Model](https://user-images.githubusercontent.com/80367187/153779468-0012dfe1-adca-4a27-a91c-79283e900f10.png)
+
+After creating just grab your host uri and your token and set as env
+
+```
+VITE_GRAPHCMS_HOST=
+VITE_GRAPHCMS_TOKEN=
+
+````
+
+Now that you have graphql configured enter in config folder in src
+
+You need to change the `base.ts` file with your configs
+
+```typescript
+export const about = {
+	name: "your name",
+	img: "your profile image",
+	description: "your description",
+	skills: [/*array of objects with props -> name: string, percent: number*/],
+	tags: [/*string array*/]
+};
+
+export const social = {
+	github: "your github username",
+	linkedin: "your linkedin username",
+	instagram: "your instagram username",
+};
+
+export const site = {
+	title: 'site title,
+	navTitle: 'navbar title',
+	lang: 'lang "en-US" or "pt-BR"'
+};
+
+
 ```
 
-> Note: the `@next` is temporary
+Now with everything configured, follow steps bellow to start in dev or to build de project, is very simple and fast to deploy in vercel!
+
 
 ## Developing
 
