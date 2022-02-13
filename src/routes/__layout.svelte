@@ -14,11 +14,11 @@
 
 <Header />
 
-<div class="grid grid-cols-3 ">
-	<div class="flex justify-center m-8">
+<div class="lg:grid lg:grid-cols-3 ">
+	<div class="flex justify-center mx-auto my-8 ">
 		<AboutCard {about} />
 	</div>
-	<div class="col-span-2 m-10">
+	<div class="lg:col-span-2 lg:m-10 m-3">
 		<slot />
 	</div>
 </div>

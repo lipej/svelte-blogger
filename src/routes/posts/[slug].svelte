@@ -25,7 +25,7 @@
 	const md = markdown(slug);
 </script>
 
-<div class="pt-8">
+<div class="lg:pt-8 pt-4">
 	{#if $data.loading}
 		<Loading />
 	{:else if $data.error}

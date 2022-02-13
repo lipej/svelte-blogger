@@ -28,10 +28,10 @@
 				</div>
 			</div>
 		</div>
-		<div>
+		<div class="hidden lg:inline">
 			<Skills skills={about.skills} />
 		</div>
-		<div class="w-full">
+		<div class="w-full hidden lg:inline">
 			<div class="mt-2 text-center">
 				<Tags tags={about.tags} />
 			</div>
