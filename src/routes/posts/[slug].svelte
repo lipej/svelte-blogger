@@ -22,7 +22,7 @@
 	export let slug: string;
 
 	const data = client.query<{ post: Post }>(GET_POST, { variables: { slug } });
-	const md = markdown(slug);
+	const md = markdown();
 </script>
 
 <div class="lg:pt-8 pt-4">
