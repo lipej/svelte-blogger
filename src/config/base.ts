@@ -1,18 +1,24 @@
 export const about = {
 	name: 'Felipe José',
 	siteTitle: 'Lipe',
-	img: 'https://www.linkpicture.com/q/LPic620050670fb95945239599.jpg',
-	description: 'Desenvolvedor de Software',
+	img: 'https://avatars.githubusercontent.com/u/80367187?v=4',
+	description:
+		'Desenvolvedor de Software, apaixonado em ajudar a dar vida a sistemas e interfaces que transformem a vida das pessoas.',
 	skills: [
-		{ name: 'Typescript', percent: '90' },
-		{ name: 'Javascript', percent: '90' },
-		{ name: 'React', percent: '60' },
-		{ name: 'Svelte', percent: '40' },
-		{ name: 'Elixir', percent: '50' },
-		{ name: 'HTML', percent: '50' },
-		{ name: 'CSS', percent: '50' }
+		//disabled for now, using tags instead
 	],
-	tags: ['Software', 'Developer', 'Tech']
+	tags: [
+		'Software',
+		'Developer',
+		'Tech',
+		'Typescript',
+		'Javascript',
+		'Svelte',
+		'Elixir',
+		'React',
+		'HTML',
+		'CSS'
+	]
 };
 
 export const social = {

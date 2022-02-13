@@ -42,6 +42,11 @@ ol {
 	margin: 0;
 }
 
+.markdown-body a {
+	color: crimson;
+	font-weight: 700;
+}
+
 .markdown-body li {
 	line-height: 24px;
 }
