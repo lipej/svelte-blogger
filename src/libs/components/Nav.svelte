@@ -62,7 +62,7 @@
 	{/if}
 
 	<button
-		class="px-8"
+		class="lg:px-8 px-2"
 		data-testid="theme"
 		data-toggle-theme={`${DARK_THEME},${LIGHT_THEME}`}
 		data-act-class="ACTIVECLASS"
