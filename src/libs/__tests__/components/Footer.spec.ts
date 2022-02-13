@@ -1,9 +1,8 @@
-import '@testing-library/jest-dom';
 import { render } from '@testing-library/svelte';
 import Footer from '../../components/Footer.svelte';
 
-describe('counter component', () => {
-	it('should confirm there are no images in the counter ', () => {
+describe('Footer component', () => {
+	it('should render Footer', () => {
 		const { getByText } = render(Footer, {
 			copyrigth: '@testing'
 		});

@@ -36,40 +36,32 @@
 	</div>
 
 	{#if social?.github}
-		<div class="flex-none">
-			<button
-				class="btn btn-square btn-ghost"
-				on:click={() => (window.location.href = `https://github.com/${social.github}`)}
-			>
+		<div class="flex-none" data-testid="github">
+			<a class="btn btn-square btn-ghost" href="https://github.com/{social.github}">
 				<Github />
-			</button>
+			</a>
 		</div>
 	{/if}
 
 	{#if social?.linkedin}
-		<div class="flex-none">
-			<button
-				class="btn btn-square btn-ghost"
-				on:click={() => (window.location.href = `https://linkedin.com/in/${social.linkedin}`)}
-			>
+		<div class="flex-none" data-testid="linkedin">
+			<a class="btn btn-square btn-ghost" href="https://linkedin.com/in/{social.linkedin}">
 				<Linkedin />
-			</button>
+			</a>
 		</div>
 	{/if}
 
 	{#if social?.instagram}
-		<div class="flex-none">
-			<button
-				class="btn btn-square btn-ghost"
-				on:click={() => (window.location.href = `https://instagram.com/${social.instagram}`)}
-			>
+		<div class="flex-none" data-testid="instagram">
+			<a class="btn btn-square btn-ghost" href="https://instagram.com/{social.instagram}">
 				<Instagram />
-			</button>
+			</a>
 		</div>
 	{/if}
 
 	<button
 		class="px-8"
+		data-testid="theme"
 		data-toggle-theme={`${DARK_THEME},${LIGHT_THEME}`}
 		data-act-class="ACTIVECLASS"
 		on:click={handleTheme}>{theme}</button

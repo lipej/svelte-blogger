@@ -1,4 +1,3 @@
-import '@testing-library/jest-dom';
 import { render } from '@testing-library/svelte';
 import AboutCard from '../../components/AboutCard.svelte';
 
@@ -10,8 +9,8 @@ const about = {
 	tags: []
 };
 
-describe('counter component', () => {
-	it('should confirm there are no images in the counter ', () => {
+describe('AboutCard component', () => {
+	it('should render AboutCard', () => {
 		const { getByText, container } = render(AboutCard, {
 			about
 		});

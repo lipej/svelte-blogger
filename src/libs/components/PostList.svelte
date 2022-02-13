@@ -6,7 +6,7 @@
 
 <div class="flex flex-col">
 	{#each data as post}
-		<div class="mx-4 mt-4">
+		<div class="mx-4 mt-4" data-testid={post.slug}>
 			<div>
 				<a href={'/posts/' + post.slug} class="font-bold text-2xl">{post.title}</a>
 				<br />
