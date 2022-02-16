@@ -33,8 +33,6 @@ After creating just grab your host uri and your token and set as env
 
 ```
 VITE_GRAPHCMS_HOST=
-VITE_GRAPHCMS_TOKEN=
-
 ````
 
 Now that you have graphql configured enter in config folder in src
